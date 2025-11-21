@@ -3,13 +3,6 @@ const bgAudio = new Audio("audio.mp3"); // put your MP3 file path here
 bgAudio.loop = true; // loop infinitely
 bgAudio.volume = 0.1; // start soft
 
-// Start audio on first user interaction
-function startAudio() {
-    bgAudio.play().catch(e => console.log("User interaction required for autoplay"));
-    document.removeEventListener("click", startAudio);
-}
-document.addEventListener("click", startAudio);
-
 // --- NO BUTTON RUN AWAY ---
 const noBtn = document.getElementById("noBtn");
 
